@@ -5,9 +5,18 @@
   "type": "module",
   "main": "index.js",
   "license": "MIT",
-  "keywords": ["dsh", "deepseek-harness", "mem0", "memory", "agents", "plugin"],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "mem0",
+    "memory",
+    "agents",
+    "plugin"
+  ],
   "dsh": {
-    "bundle": { "patch": "./cordis.patch.yml" },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "platform": "web",
       "inject": [
@@ -22,5 +31,29 @@
     "./client": "./client.js",
     "./package.json": "./package.json"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0Junze0/dsh-mem0.git"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "server",
+    "export_mem.py",
+    "sync.sh",
+    "cordis.patch.yml",
+    "config.example.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": ">=3.18.0",
+    "@deepseek-ai/dsh-tools": ">=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-runtime": ">=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-connection": ">=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-settings": ">=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-rc.1 <0.3.0-0"
+  }
 }
