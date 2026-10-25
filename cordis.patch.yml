@@ -1,0 +1,6 @@
+# 把插件插进 DSH 的 profile。安装后 dsh 会自动读取本文件。
+- insert:
+    - id: mem0
+      name: dsh-mem0
+      config:
+        enabled: true

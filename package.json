@@ -1,0 +1,26 @@
+{
+  "name": "dsh-mem0",
+  "version": "0.2.0",
+  "description": "mem0-backed long-term memory for DeepSeek Harness: auto recall, append-only capture, nightly dedupe/merge/conflict resolution, persistent topic graph with cards, user profile, snapshots & undo, and a full-page memory UI.",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": ["dsh", "deepseek-harness", "mem0", "memory", "agents", "plugin"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "engines": { "node": ">=20" }
+}
